@@ -49,6 +49,7 @@ app.post('/generate-image', async (req, res) => {
       },
       body: JSON.stringify({
         prompt: prompt,
+        negative_prompt: "nsfw, nude, naked, explicit, sexual, adult content, pornographic",
         width: 512,
         height: 512,
         num_steps: 20,
