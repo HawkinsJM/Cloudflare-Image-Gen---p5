@@ -4,11 +4,14 @@ const cors = require('cors');
 const fetch = require('node-fetch');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+// Serve static files (HTML, CSS, JS, p5.js libraries)
+app.use(express.static(__dirname));
 
 // Cloudflare API configuration
 const CLOUDFLARE_ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID;

@@ -114,7 +114,7 @@ async function generateImage() {
   updateStatus('Generating your image...', 'info');
 
   try {
-    const response = await fetch('http://localhost:3000/generate-image', {
+    const response = await fetch('/generate-image', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
